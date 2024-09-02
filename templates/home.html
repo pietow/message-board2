@@ -1,0 +1,19 @@
+<!-- templates/home.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}"> <!-- Include the CSS file -->
+</head>
+<h1>Message board homepage</h1>
+<ul>
+
+{% for post in post_list %}
+
+<li>{{ post.text }}</li>
+
+{% endfor %}
+</ul>
